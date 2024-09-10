@@ -1,0 +1,54 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS-Arq</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+</head>
+<body>
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="navbar_horizontal">
+          <div class="btn_navbar"><a class="navbar-brand" href="{% url 'success'%}"><img src="{%static 'logos/logo_nome_preto.png'%}" alt="logo home"></a></div>
+          <div class="btn_navbar"><a class="nav-link active" aria-current="page" href="{% url 'quiz1'%}">Quiz</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'estilo'%}">Estilos</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'portifolio'%}">Portifólio</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'redes'%}">Contato</a></div>
+      </div>
+    </nav>
+
+  </header>    <br>
+
+    <div class="container">
+      <h3>clara.soledade@gmail.com</h3> 
+    </div>
+    <br>
+  <div class="container_redes">
+    <a href="http://www.instagram.com/clarasoledade">
+    <h1>Siga-nos!</h1>
+    <br>
+    <img src="{% static 'logos/logoInstagram.png' %}" target="_blank" rel="noopener noreferrer" alt="Logo Instagram"  >
+    </a>
+  </div>
+
+
+
+
+    <footer>
+        <br>
+        <div class="container">
+            Produzido por Didoki  -  @felipehiranojp   (71)99910-0066   felipehiranojp@yahoo.com.br
+        </div>
+        <br>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,174 @@
+h1{
+    color: darkgrey;
+}
+
+h3{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    margin: 20px;
+}
+h4{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    margin: 20px;
+}
+
+.caixa_ferramentas{
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    box-shadow: 3px 3px lightgray;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 570px;
+    margin: 10px auto;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.container-fluid{
+    margin: auto;   
+    border-radius: 10px;
+    box-shadow: 3px 3px lightgray;
+    display: flex;
+    justify-items:flex-start;
+
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(231, 230, 230);
+}
+.container_portifolio{
+    width: 95%;
+    display: flex;
+    box-shadow: 3px 3px lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px 10px;
+    justify-content: center;
+    justify-items: center;
+    object-fit: contain;
+
+}
+img{
+    max-width: 100%;
+}
+
+.container_redes{
+    box-shadow: 3px 1px 0px lightgray;
+    max-width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    align-self: center;
+    align-items: center;
+}
+.container_quiz{
+    display: inline-flex;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(202, 202, 202, 0.911);
+    margin: auto;
+    background-color: rgb(240, 239, 239);
+    
+}
+a{text-decoration: none;
+}
+.quiz_vertical{
+    display:inline-block;
+    flex-direction: column;
+    align-content: center;
+    margin: 5px;
+    }
+.quiz_vertical_hobbie{
+    display:inline-block;
+    flex-direction: column;
+    align-content: center;
+    margin-top: -45px;
+    margin-right: 3px;
+}
+.quiz_horizontal{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.btn_enviar{
+    display: flex;
+    margin: auto;
+    width: 70%;
+    border: 3px solid transparent;
+    background-color: rgb(192, 192, 192);
+    border-radius: 5px;
+}
+.container_estilo{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 900px;
+
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(202, 202, 202, 0.911);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.botao1:hover{
+    content: url('../painel_home/painel12.JPG');
+}
+.botao2:hover{
+    content: url('../painel_home/painel22.JPG');
+}
+.botao3:hover{
+    content: url('../painel_home/painel32.JPG');
+}
+.botao4:hover{
+    content: url('../painel_home/painel42.JPG');
+}
+.navbar-brand:hover{
+    content: url(../logos/logo_nome_azul.png);
+}
+.navbar-brand:hover{
+margin: 0%;
+padding: 0%;
+}
+.navbar_horizontal{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+
+}
+.btn_navbar{
+    padding-inline: 10px;
+}
+.btn_navbar:hover{
+      font-weight: bold;
+      color: turquoise;
+      
+
+}
+.logo_central{
+    margin-inline: 37px;
+}
+.logo_central:hover{
+    content: url(../logos/logo_grande_azul.png);
+}

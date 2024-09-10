@@ -1,0 +1,115 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz-9</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+</head>
+<body>
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="navbar_horizontal">
+          <div class="btn_navbar"><a class="navbar-brand" href="{% url 'success'%}"><img src="{%static 'logos/logo_nome_preto.png'%}" alt="logo home"></a></div>
+          <div class="btn_navbar"><a class="nav-link active" aria-current="page" href="{% url 'quiz1'%}">Quiz</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'estilo'%}">Estilos</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'portifolio'%}">Portifólio</a></div>
+          <div class="btn_navbar"><a class="nav-link" href="{% url 'redes'%}">Contato</a></div>
+      </div>
+    </nav>
+
+  </header>    <br>
+
+    <div class="container_quiz">
+        <h1>Seu perfil de decoração é: 
+            {% if maior_estilo == 'camp'%} Rústico {% endif%}
+            {% if maior_estilo == 'clas'%} Classico {% endif%}
+            {% if maior_estilo == 'esca'%} Escandinavo {% endif%}
+            {% if maior_estilo == 'indu'%} Industrial {% endif%}
+            {% if maior_estilo == 'mini'%} Minimalista {% endif%}
+            {% if maior_estilo == 'mode'%} Moderno {% endif%}
+            {% if maior_estilo == 'retr'%} Retrô {% endif%}
+            {% if maior_estilo == 'vint'%} Vintage {% endif%}
+            </h1>
+    </div>
+    <br>
+    <div class="container_quiz">
+            {% if maior_estilo == 'camp'%} <img src="{% static 'escolha_final/escolha_camp1.jpg'%}" alt="imagem estilo campestre"> {% endif%}
+            {% if maior_estilo == 'clas'%} <img src="{% static 'escolha_final/escolha_clas1.jpg'%}" alt="imagem estilo classica"> {% endif%}
+            {% if maior_estilo == 'esca'%} <img src="{% static 'escolha_final/escolha_esca1.jpg'%}" alt="imagem estilo escandinavo"> {% endif%}
+            {% if maior_estilo == 'indu'%} <img src="{% static 'escolha_final/escolha_indu1.png'%}" alt="imagem estilo industrial"> {% endif%}
+            {% if maior_estilo == 'mini'%} <img src="{% static 'escolha_final/escolha_mini1.jpg'%}" alt="imagem estilo minimalista"> {% endif%}
+            {% if maior_estilo == 'mode'%} <img src="{% static 'escolha_final/escolha_moderno1.jpg'%}" alt="imagem estilo moderno"> {% endif%}
+            {% if maior_estilo == 'retr'%} <img src="{% static 'escolha_final/escolha_retro1.jpg'%}" alt="imagem estilo retro"> {% endif%}
+            {% if maior_estilo == 'vint'%} <img src="{% static 'escolha_final/escolha_vintage1.jpg'%}" alt="imagem estilo vintage"> {% endif%}
+    </div>
+    <br>
+    <div class="container_quiz">
+            
+            {% if maior_estilo == 'camp'%} <h3>O estilo campestre, também conhecido como rústico, é inspirado na vida rural e na natureza. Ele incorpora elementos acolhedores e confortáveis, como madeira natural, tecidos leves e estampas florais. Móveis e acessórios geralmente possuem uma sensação de artesanato e nostalgia.</h3> {% endif%}
+            
+            {% if maior_estilo == 'clas'%} <h3>O estilo clássico é atemporal e elegante, inspirado nas antigas tradições europeias. Ele apresenta móveis refinados, detalhes ornamentados e uma atmosfera luxuosa. As cores são frequentemente neutras e suaves, com toques de cores mais ricas e vibrantes.</h3> {% endif%}
+            
+            {% if maior_estilo == 'esca'%} <h3>O estilo escandinavo é conhecido por sua simplicidade, funcionalidade e minimalismo. Ele valoriza a luz natural, espaços arejados e materiais naturais. Os ambientes escandinavos são caracterizados por linhas limpas, cores claras e uma sensação de serenidade.</h3> {% endif%}
+            
+            {% if maior_estilo == 'indu'%} <h3>O estilo industrial tem suas raízes em espaços industriais convertidos em residências. Ele apresenta elementos como tijolos expostos, tubulações visíveis e materiais robustos como metal e concreto. A estética é urbana e moderna, com uma sensação de crueza e autenticidade.</h3> {% endif%}
+            
+            {% if maior_estilo == 'mini'%} <h3>O estilo minimalista foca na simplicidade, na limpeza e na redução ao essencial. Ele elimina o excesso de decoração e mantém apenas o necessário para criar espaços calmos e descomplicados. Os ambientes minimalistas são caracterizados por linhas simples, cores neutras e uma sensação de ordem.</h3> {% endif%}
+            
+            {% if maior_estilo == 'mode'%} <h3>O estilo moderno é caracterizado pela inovação, pelo design contemporâneo e pela ênfase na funcionalidade. Ele incorpora materiais inovadores, formas geométricas e tecnologia avançada. Os ambientes modernos são limpos, elegantes e adaptáveis às necessidades dos ocupantes.</h3> {% endif%}
+            
+            {% if maior_estilo == 'retr'%} <h3>O estilo retrô busca inspiração nas décadas passadas, especialmente nas décadas de 1950, 1960 e 1970. Ele apresenta elementos de design vintage, cores ousadas e estampas geométricas. Os ambientes retrô evocam uma sensação de nostalgia e diversão.</h3> {% endif%}
+            
+            {% if maior_estilo == 'vint'%} <h3>O estilo vintage incorpora elementos de décadas passadas, mas de uma forma mais sutil e refinada do que o estilo retrô. Ele combina peças antigas ou de segunda mão com elementos contemporâneos para criar uma estética eclética e única. Os ambientes vintage são caracterizados por charme, personalidade e história.</h3> {% endif%}
+    </div>
+
+    <br>
+    <div class="container_quiz">
+            {% if maior_estilo == 'camp'%} <img src="{% static 'escolha_final/escolha_camp2.png'%}" alt="imagem estilo campestre"> {% endif%}
+            {% if maior_estilo == 'clas'%} <img src="{% static 'escolha_final/escolha_clas2.jpg'%}" alt="imagem estilo classico"> {% endif%}
+            {% if maior_estilo == 'esca'%} <img src="{% static 'escolha_final/escolha_esca2.png'%}" alt="imagem estilo escandinavo"> {% endif%}
+            {% if maior_estilo == 'indu'%} <img src="{% static 'escolha_final/escolha_indu2.jpg'%}" alt="imagem estilo industrial"> {% endif%}
+            {% if maior_estilo == 'mini'%} <img src="{% static 'escolha_final/escolha_mini2.jpg'%}" alt="imagem estilo minimalista"> {% endif%}
+            {% if maior_estilo == 'mode'%} <img src="{% static 'escolha_final/escolha_moderno2.jpg'%}" alt="imagem estilo moderno"> {% endif%}
+            {% if maior_estilo == 'retr'%} <img src="{% static 'escolha_final/escolha_retro2.jpg'%}" alt="imagem estilo retro"> {% endif%}
+            {% if maior_estilo == 'vint'%} <img src="{% static 'escolha_final/escolha_vintage2.jpg'%}" alt="imagem estilo vintage"> {% endif%}
+    </div>
+    <br>
+
+    <br>
+    <div class="container_quiz">
+            
+            {% if maior_estilo == 'camp'%} <h3>Madeira rústica, cores suaves e neutras, estampas florais, móveis antigos ou com aparência desgastada, elementos naturais (como pedra e plantas), tecidos naturais (linho, algodão).</h3> {% endif%}
+            
+            {% if maior_estilo == 'clas'%} <h3>Móveis de madeira escura ou dourada, tecidos ricos (veludo, seda), detalhes ornamentados (molduras, entalhes), cores neutras com toques de cores vivas, simetria e equilíbrio na disposição dos móveis.</h3> {% endif%}
+            
+            {% if maior_estilo == 'esca'%} <h3>Madeira clara, tons neutros (branco, cinza, bege), móveis funcionais e de design simples, poucos acessórios decorativos, abundância de luz natural, texturas naturais (couro, lã).</h3> {% endif%}
+            
+            {% if maior_estilo == 'indu'%} <h3>Tijolos expostos, metal (ferro, aço), concreto, tubulações aparentes, móveis de estilo vintage ou retro, iluminação suspensa (luminárias industriais), paleta de cores neutras e escuras.</h3> {% endif%}
+            
+            {% if maior_estilo == 'mini'%} <h3>Móveis de linhas simples, espaços vazios e desobstruídos, cores neutras (branco, preto, cinza), materiais minimalistas (vidro, metal, plástico), poucos acessórios, iluminação suave e indireta.</h3> {% endif%}
+            
+            {% if maior_estilo == 'mode'%} <h3>Móveis de design contemporâneo, formas geométricas simples, materiais modernos (vidro, metal, plástico), cores vivas e contrastantes, linhas limpas e definidas, tecnologia integrada à decoração.</h3> {% endif%}
+            
+            {% if maior_estilo == 'retr'%} <h3>Móveis vintage ou inspirados em décadas passadas, cores vibrantes (laranja, amarelo, verde), estampas geométricas e psicodélicas, acessórios retro (telefones antigos, toca-discos), iluminação de estilo antigo.</h3> {% endif%}
+            
+            {% if maior_estilo == 'vint'%} <h3>Peças antigas ou vintage, mistura de estilos e épocas, cores suaves e desbotadas, móveis restaurados, acessórios vintage (espelhos, quadros, relógios), elementos de época específicos (art déco, art nouveau, mid-century).</h3> {% endif%}
+    </div>
+
+
+    <footer>
+        <br>
+        <div class="container">
+            Produzido por Didoki  -  @felipehiranojp   (71)99910-0066   felipehiranojp@yahoo.com.br
+        </div>
+        <br>
+
+    </footer>
+</body>
+</html>
