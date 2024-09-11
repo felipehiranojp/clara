@@ -50,9 +50,11 @@ def checkout_session(request):
 
             
 def success(request):
+    nome = f"{request.user.first_name}"
+    return render(request,'success.html',{'nome':nome})
 
-    return render(request,'success.html')
-
+    
+    
 def cancel(request):
     return render(request,'cancel.html')
 
@@ -111,7 +113,14 @@ def stripe_webhook(request):
     
     return HttpResponse(status=200)
 
-
+def logout(request):
+    session = request.session
+    session['nome']=''
+    session['last_name']=''
+    session['email']=''
+    nome=''
+    return render(request,'success.html',{'nome':nome})    
+    
 def estilo(request):
     return render(request,'estilo.html')
 def portifolio(request):

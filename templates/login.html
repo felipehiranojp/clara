@@ -23,6 +23,9 @@
             max-width: 800px; /* Increased width */
             margin: 0 auto;
             padding: 20px;
+            background-image: url(static/painel_home/Capturar.png);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .bg-white {
@@ -82,7 +85,7 @@
         .divider::before, .divider::after {
             content: "";
             height: 1px;
-            background-color: #ddd;
+            background-color: #884e4e;
             position: absolute;
             width: 40%;
             top: 50%;
@@ -98,7 +101,7 @@
 
         .divider.text-muted {
             font-size: 14px;
-            color: #666;
+            color: #963333;
             margin: 0 15px;
             line-height: 1.5;
         }
@@ -126,9 +129,11 @@
                     <br>
                     <a href="{% provider_login_url 'google' %}">
                         <button class="btn btn-google">
-                            <img src="https://playtht-website-assets.s3.amazonaws.com/img/brand/google.svg" alt="Google logo"/>Sign up with Google
+                            <img src="https://playtht-website-assets.s3.amazonaws.com/img/brand/google.svg" alt="Google logo"/>Entrar com conta Google
                         </button>
                     </a>
+                    <br><br>
+                    <a href="/success">Entrar sem logar</a>
                 </div>
             </div>    
         </div>

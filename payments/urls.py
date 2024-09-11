@@ -12,6 +12,7 @@ urlpatterns = [
     path("cancel",views.cancel,name='cancel'),
     path("estilo",views.estilo,name='estilo'),
     path("portifolio",views.portifolio,name='portifolio'),
+    path("logout",views.logout,name='logout'),
     path("redes",views.redes,name='redes'),
     path("quiz1",views.quiz1,name='quiz1'),
     path("quiz2",views.quiz2,name='quiz2'),
